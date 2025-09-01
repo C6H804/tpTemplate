@@ -29,21 +29,35 @@ let priceData = {
         { warranty: "48 mois", price: 150, selected: false }
     ],
     basePrice: 500,
+    oldPrice: []
 };
 
 export default function loadPriceSim() {
+
     updatePrice();
     let target = document.getElementById("priceSimForm");
     const colorsDiv = loadColors(priceData.colors);
+    const sizeDiv = createElement("div", { class: "selectGroup" });
+    const sizeLabel = createElement("label", { for: "sizeSelect" });
+    sizeLabel.innerText = "Taille : ";
     const sizeSelect = loadSize(priceData.size);
+    sizeDiv.appendChild(sizeLabel);
+    sizeDiv.appendChild(sizeSelect);
     const storageDiv = loadStorage(priceData.storage);
+    const warrantyDiv = createElement("div", { class: "selectGroup" });
+    const warrantyLabel = createElement("label", { for: "warrantySelect" });
+    warrantyLabel.innerText = "Garantie : ";
     const warrantySelect = loadWarranty(priceData.warranty);
+    warrantyDiv.appendChild(warrantyLabel);
+    warrantyDiv.appendChild(warrantySelect);
     target.appendChild(colorsDiv);
-    target.appendChild(sizeSelect);
+    target.appendChild(sizeDiv);
     target.appendChild(storageDiv);
-    target.appendChild(warrantySelect);
-
+    target.appendChild(warrantyDiv);
 }
+
+
+
 function loadWarranty(warrantyData) {
     const warrantySelect = createElement("select", { id: "warrantySelect" });
     warrantyData.forEach((e, i) => {
@@ -138,6 +152,8 @@ function updateColors(event) {
     updatePrice();
 }
 
+
+
 function updatePrice() {
     let price = priceData.basePrice
         + priceData.colors.find(c => c.selected).price
@@ -145,4 +161,10 @@ function updatePrice() {
         + priceData.storage.find(s => s.selected).price
         + priceData.warranty.find(w => w.selected).price;
     document.getElementById("price").innerText = `Prix : ${price}€`;
+    if (priceData.oldPrice.length > 0 && priceData.oldPrice[priceData.oldPrice.length - 1] !== price) {
+        priceData.oldPrice.push(price);
+    } else if (priceData.oldPrice.length === 0) {
+        priceData.oldPrice.push(price);
+    }
 }
+

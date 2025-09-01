@@ -1,9 +1,52 @@
-form#priceSimForm {
+form#priceSimForm label {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.priceSimulator {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    padding: 20px;
+
+}
+form#priceSimForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.selectGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+/* mobile */
+@media (max-width: 600px) {
+    .priceSimulator {
+        padding: 8px;
+    }
+    form#priceSimForm {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .selectGroup, #colorButtonsDiv, #storageButtonsDiv {
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100%;
+    }
+    form#priceSimForm select, .storageButton, .colorButton {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    form#priceSimForm div {
+        margin-bottom: 1em;
+    }
 }
 
 form#priceSimForm select {
@@ -69,6 +112,8 @@ form#priceSimForm select {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    align-items: flex-end;
+    height: 100%;
 }
 
 .storageButton {
