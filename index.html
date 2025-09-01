@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/style.css">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
+
 <body>
+
+    <section class="faq-section">
+        <h1>FAQ</h1>
+        <input type="text" id="faq-search" placeholder="Rechercher une question..." />
+        <div id="faq-container"></div>
+    </section>
+
     <div class="article_avis_clients">
         <h1>Donnez votre avis !</h1>
 
@@ -29,6 +39,9 @@
             </article>
         </template>
     </div>
+  
 <script type="module" src="dist/js/script.js"></script>
+<script src="dist/js/components/faq.js"></script>
 </body>
+
 </html>

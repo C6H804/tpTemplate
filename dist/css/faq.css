@@ -1,0 +1,60 @@
+/* Container principal */
+.faq-section {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* bloc question & réponse */
+.faq-item {
+  background: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+/* Question cliquable */
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  background: #eee;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Fléche de l'item */
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Fléche pivot quand actif */
+.faq-item.active .faq-icon {
+  transform: rotate(90deg);
+}
+
+/* Réponse masquée par défaut */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  border-top: 1px solid #ddd;
+}
+
+/* Réponse visible quand actif */
+.faq-item.active .faq-answer {
+  padding: 15px;
+  max-height: 200px;
+}
+
+/* Champ recherche */
+#faq-search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
