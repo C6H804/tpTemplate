@@ -1,0 +1,132 @@
+form#priceSimForm label {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.priceSimulator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+form#priceSimForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.selectGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+/* mobile */
+@media (max-width: 600px) {
+    .priceSimulator {
+        padding: 8px;
+    }
+    form#priceSimForm {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .selectGroup, #colorButtonsDiv, #storageButtonsDiv {
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100%;
+    }
+    form#priceSimForm select, .storageButton, .colorButton {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    form#priceSimForm div {
+        margin-bottom: 1em;
+    }
+}
+
+form#priceSimForm select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.colorButton {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transition: background-color 0.3s, scale 0.3s;
+}
+
+#colorButtonsDiv {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.colorButton.black {
+    background-color: black;
+    color: white;
+}
+
+.colorButton.white {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.colorButton.red {
+    background-color: red;
+    color: white;
+}
+
+.colorButton.blue {
+    background-color: blue;
+    color: white;
+}
+
+.colorButton.green {
+    background-color: green;
+    color: white;
+}
+
+.colorButton.gold {
+    background-color: gold;
+    color: black;
+}
+
+.colorButton.active {
+    scale: 1.1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+}
+
+#storageButtonsDiv {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.storageButton {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transition: background-color 0.3s, scale 0.3s;
+}
+
+.storageButton.active {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bolder;
+}
