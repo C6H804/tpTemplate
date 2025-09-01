@@ -1,0 +1,7 @@
+/* Font */
+:root {
+    --font-family-title: "Roboto", sans-serif;
+    --font-family-text: "Roboto", sans-serif;
+    --font-weight-title: bolder;
+    --font-weight-text:  normal;
+}
