@@ -1,3 +1,5 @@
+import loadPriceSim from "./priceSimulator.js";
+loadPriceSim();
 import { creerAvis } from "./components/_avis.js";
 import { initFormulaire } from "./components/_formulaire.js";
 

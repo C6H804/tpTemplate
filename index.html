@@ -8,40 +8,55 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
+    <script type="module" src="dist/js/script.js" defer></script>
+    <link rel="stylesheet" href="dist/css/style.css">
+
 </head>
 
 <body>
+    <header>
 
-    <section class="faq-section">
-        <h1>FAQ</h1>
-        <input type="text" id="faq-search" placeholder="Rechercher une question..." />
-        <div id="faq-container"></div>
-    </section>
+    </header>
+    <main>
+        
+        <section class="faq-section">
+            <h1>FAQ</h1>
+            <input type="text" id="faq-search" placeholder="Rechercher une question..." />
+            <div id="faq-container"></div>
+        </section>
+        
+        <section class="priceSimulator">
+            <h2>Simulateur de prix</h2>
+            <form action="" id="priceSimForm">
+            </form>
+            <h2 id="price">prix : </h2>
+        </section>
+        <div class="article_avis_clients">
+            <h1>Donnez votre avis !</h1>
 
-    <div class="article_avis_clients">
-        <h1>Donnez votre avis !</h1>
+            <form id="avis_form">
+                <input type="text" id="nom" placeholder="Votre nom" required>
+                <textarea id="message" placeholder="Votre avis" required></textarea>
+                <button type="submit">Ajouter</button>
+            </form>
 
-        <form id="avis_form">
-            <input type="text" id="nom" placeholder="Votre nom" required>
-            <textarea id="message" placeholder="Votre avis" required></textarea>
-            <button type="submit">Ajouter</button>
-        </form>
+            <section id="avis_liste"></section>
 
-        <section id="avis_liste"></section>
+            <template id="avis_template">
+                <article class="avis">
+                    <h2 class="avis_nom"></h2>
+                    <p class="avis_message"></p>
+                    <button class="supprimer_btn">Supprimer</button>
+                </article>
+            </template>
+        </div>
+    </main>
 
-        <template id="avis_template">
-            <article class="avis">
-                <h2 class="avis_nom"></h2>
-                <p class="avis_message"></p>
-                <button class="supprimer_btn">Supprimer</button>
-            </article>
-        </template>
-    </div>
-  
-<script type="module" src="dist/js/script.js"></script>
-<script src="dist/js/components/faq.js"></script>
+    <script type="module" src="dist/js/script.js"></script>
+    <script src="dist/js/components/faq.js"></script>
 </body>
 
 </html>
