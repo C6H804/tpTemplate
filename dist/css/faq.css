@@ -1,7 +1,7 @@
 /* Container principal */
 .faq-section {
   max-width: 600px;
-  border: 1px solid #007BFF;
+  border: 1px solid #007bff;
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -14,7 +14,7 @@
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid #ddd;
-  border-top: 3px solid #007BFF;
+  border-top: 3px solid #007bff;
   border-radius: 12px;
 }
 
@@ -56,7 +56,7 @@
   padding: 15px;
   max-height: 200px;
   font-family: var(--font-family-text);
-    font-weight: var(--font-weight-text);
+  font-weight: var(--font-weight-text);
 }
 
 /* Champ recherche */
