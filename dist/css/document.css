@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+}
+
+p, button, input, textarea, label {
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-text);
+}

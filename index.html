@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/style.css">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
@@ -16,7 +20,28 @@
         <div id="faq-container"></div>
     </section>
 
-    <script src="dist/js/components/faq.js"></script>
+    <div class="article_avis_clients">
+        <h1>Donnez votre avis !</h1>
+
+        <form id="avis_form">
+            <input type="text" id="nom" placeholder="Votre nom" required>
+            <textarea id="message" placeholder="Votre avis" required></textarea>
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <section id="avis_liste"></section>
+
+        <template id="avis_template">
+            <article class="avis">
+                <h2 class="avis_nom"></h2>
+                <p class="avis_message"></p>
+                <button class="supprimer_btn">Supprimer</button>
+            </article>
+        </template>
+    </div>
+  
+<script type="module" src="dist/js/script.js"></script>
+<script src="dist/js/components/faq.js"></script>
 </body>
 
 </html>
