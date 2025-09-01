@@ -2,12 +2,10 @@
 @import url("element_adrien.css");
 @import url("element.css");
 @import url("settings.css");
-<<<<<<< HEAD
 @import url("faq.css");
 @import url("reset.css");
 
 @import url("articles/priceSimulator.css");
-=======
 
 h2 {
   padding: 20px;
@@ -101,4 +99,3 @@ h2 {
 .modal-content button:hover {
   background-color: #d44000;
 }
->>>>>>> df3428cf5e1c2c4efd97b683f6cf095f5be9b113

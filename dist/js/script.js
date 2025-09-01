@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import loadPriceSim from "./priceSimulator.js";
 loadPriceSim();
 import { creerAvis } from "./components/_avis.js";
@@ -16,7 +15,6 @@ const avisTemplate = document.getElementById("avis_template");
 avisData.forEach(avis => creerAvis(avis, avisTemplate, avisListe));
 
 initFormulaire(avisForm, avisTemplate, avisListe);
-=======
 // FORMULAIRE ----------------------------------:
 // Récupérer le formulaire et le div des erreurs
 const form = document.querySelector(".form-contact");
@@ -69,4 +67,3 @@ form.addEventListener("submit", function (e) {
   }
 });
 // FIN FORMULAIRE ----------------------------------
->>>>>>> df3428cf5e1c2c4efd97b683f6cf095f5be9b113

@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,10 +17,9 @@ p, button, input, textarea, label {
     font-weight: var(--font-weight-text);
     color: var(--font-color);
 }
-=======
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
->>>>>>> df3428cf5e1c2c4efd97b683f6cf095f5be9b113
